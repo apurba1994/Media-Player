@@ -1,23 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
-
+import { useState, useRef } from 'react';
+import { Route, Routes } from 'react-router-dom';
+import MediaPlayer from './components/MediaPlayer';
+import VoiceRecorder from './components/VoiceRecorder';
 function App() {
+  const [songs, setSongs] = useState([]);
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='app'>
+      <Routes>
+        <Route path='/' exact element={<MediaPlayer  songs={songs} setSongs={setSongs} />} />
+        <Route path='/recorder' exact element={<VoiceRecorder songs={songs} setSongs={setSongs}  />} />
+      </Routes>
     </div>
   );
 }

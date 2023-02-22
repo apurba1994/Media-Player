@@ -1,0 +1,42 @@
+nav {
+    min-height: 10vh;
+    margin-left: 120px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    div {
+        display: flex;
+        gap: 20px;
+    }
+
+    a {
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        border: 2px solid rgb(123, 68, 68);
+        padding: 0.5rem;
+        transition: all 0.3s ease;
+        text-decoration: none;
+
+        &:hover {
+            background: rgb(143, 67, 67);
+            color: white;
+        }
+    }
+
+    button {
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        border: 2px solid rgb(65, 65, 65);
+        padding: 0.5rem;
+        transition: all 0.3s ease;
+
+        &:hover {
+            background: rgb(65, 65, 65);
+            color: white;
+        }
+    }
+
+}
